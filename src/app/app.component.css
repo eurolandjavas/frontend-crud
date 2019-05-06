@@ -1,0 +1,15 @@
+.button {
+    background-color: rgb(152, 175, 76); /* Green */
+    border: 1px darkgreen;
+    border-style: solid;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+  .padd {
+    padding: 0 8px 10px 0;
+  }

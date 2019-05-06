@@ -1,0 +1,22 @@
+<h3>User List</h3>
+<table id = "users">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>City</th>
+            <th>Age</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users | async">
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.city}}</td>
+            <td>{{user.age}}</td>
+            <td class="last"><button class="button" [routerLink]="['../update', user | json]">Update</button></td>
+            <td class="last"><button class="button" (click)="deleteUser(user.id)">Delete</button></td>
+        </tr>
+    </tbody>

@@ -1,0 +1,40 @@
+<h3>Create New User</h3>
+<div>
+  <form [formGroup]="myForm" (ngSubmit)="create()">
+    <div class="form-group">
+      <label for="name" class="label">First Name</label>
+      <input type="text" class="form-control" id="firstName" formControlName="firstName" name="firstName">
+      <div *ngIf="submitted && f.firstName.errors" class="invalid">
+          <div *ngIf="f.firstName.errors">FirstName is not valid</div>
+      </div> 
+    </div>
+
+    <div class="form-group">
+      <label for="name" class="label">Last Name</label>
+      <input type="text" class="form-control" id="lastName" formControlName="lastName"  name="lastName">
+      <div *ngIf="submitted && f.lastName.errors" class="invalid">
+          <div *ngIf="f.lastName.errors">LastName is not valid</div>
+      </div> 
+    </div>
+
+    <div class="form-group">
+      <label for="name" class="label">City</label>
+      <input type="text" class="form-control" id="city" formControlName="city"  name="city">
+      <div *ngIf="submitted && f.city.errors" class="invalid">
+          <div *ngIf="f.city.errors">City is not valid</div>
+      </div> 
+    </div>
+
+    <div class="form-group">
+      <label for="name" class="label">Age</label>
+      <input type="text" class="form-control" id="age" formControlName="age"  name="age">
+      <div *ngIf="submitted && f.age.errors" class="invalid">
+          <div *ngIf="f.age.errors">Age is not valid</div>
+      </div>      
+    </div>
+
+    <div class="right">
+      <button type="submit" class="button">Create</button>
+    </div>
+  </form>
+</div>
